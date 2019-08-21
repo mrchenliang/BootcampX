@@ -23,7 +23,7 @@ FROM students
 JOIN cohorts
 ON cohorts.id = cohort_id
 WHERE cohorts.name LIKE $1
-LIMIT $2
+LIMIT $2;
 `
 const cohortName = process.argv[2];
 const limit = process.argv[3] || 5;
